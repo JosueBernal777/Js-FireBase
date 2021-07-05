@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Artesa</title>
+  </head>
+
+  <body id="body">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="" id="text-logo">Artesa</a>
+        </div>
+        <ul class="items">
+          <li>
+            <a href=""
+              ><span class="material-icons">pending_actions</span> Artesanias
+            </a>
+          </li>
+          <li>
+            <a href=""> <span class="material-icons"> pets </span>Pacientes </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="material-icons"> groups </span> Médicos
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div class="header">
+          <h2 class="title">Artesanias</h2>
+          <div class="search">
+            <button type="button" class="btn-float">
+              <i class="material-icons">search</i>
+            </button>
+            <input
+              type="text"
+              id="search"
+              placeholder="Buscar cita médica"
+              onkeydown="document.getElementById('btn_clear_search').classList.remove('hide')"
+            />
+            <button id="btn_clear_search" type="button" class="hide btn-float">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </div>
+        <ul class="cites">
+          <li class="cite-head text-color-primary">
+            <p>Nombre</p>
+            <p>Descripción</p>
+            <p>Precio</p>
+          </li>
+        </ul>
+        <ul class="cites scrollable" id="artesanias"></ul>
+        <button type="button" class="btn-float">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
